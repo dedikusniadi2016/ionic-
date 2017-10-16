@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { RestProvider } from '../../providers/rest/rest';
 
 /**
  * Generated class for the VideoPage page.
@@ -15,11 +16,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class VideoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  users: any;
+
+  constructor(public navCtrl: NavController, public restProvider: RestProvider) {
+    this.getVideo();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad VideoPage');
+  getVideo() {
+    this.restProvider.getVideo()
+      .then(data => {
+        this.users = data;
+        console.log(this.users);
+      });
   }
 
 }

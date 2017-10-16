@@ -5,8 +5,6 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class RestProvider {
 
-  retry: any;
-
   apiUrl = 'http://services.bisnis.com/bdg/category';
 
   constructor(public http: HttpClient) {
@@ -23,6 +21,28 @@ export class RestProvider {
     });
   }
 
+
+  getHeadline() {
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + '/getheadline').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+  getheadlinebaru() {
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + '/getheadlinebaru').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+
   getNasional() {
     return new Promise(resolve => {
       this.http.get(this.apiUrl + '/getkabarnasional').subscribe(data => {
@@ -32,6 +52,8 @@ export class RestProvider {
       });
     });
   }
+
+
 
   getBisnis() {
     return new Promise(resolve => {

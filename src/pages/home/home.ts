@@ -9,17 +9,28 @@ import { RestProvider } from '../../providers/rest/rest';
 export class HomePage {
 
   users: any;
+  headline: any;
 
   constructor(public navCtrl: NavController, public restProvider: RestProvider) {
-    this.getUsers();
+    this.getheadlinebaru();
   }
 
-  getUsers() {
-    this.restProvider.getUsers()
+  getheadlinebaru() {
+    this.restProvider.getheadlinebaru()
       .then(data => {
         this.users = data;
         console.log(this.users);
       });
   }
+
+
+  // getHeadline() {
+  //   this.restProvider.getheadlinebaru()
+  //     .then(data => {
+  //       this.users = data;
+  //       console.log(this.headline);
+  //     });
+  // }
+
 
 }
