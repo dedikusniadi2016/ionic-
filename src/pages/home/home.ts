@@ -12,6 +12,7 @@ export class HomePage {
   headline: any;
 
   constructor(public navCtrl: NavController, public restProvider: RestProvider) {
+    this.getHeadline();
     this.getHeadlinebaru();
   }
 
@@ -22,5 +23,16 @@ export class HomePage {
         console.log(this.users);
       });
   }
+
+  getHeadline() {
+    this.restProvider.getHeadline()
+      .then(data => {
+        this.users = data;
+        console.log(this.headline);
+      });
+  }
+
+
+
 
 }
