@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { RestProvider } from '../../providers/rest/rest';
+
 
 /**
  * Generated class for the BisnisPage page.
@@ -15,11 +17,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class BisnisPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  users: any;
+
+  constructor(public navCtrl: NavController, public restProvider: RestProvider) {
+    this.getBisnis();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad BisnisPage');
+  getBisnis() {
+    this.restProvider.getBisnis()
+      .then(data => {
+        this.users = data;
+        console.log(this.users);
+      });
   }
 
 }
