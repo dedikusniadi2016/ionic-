@@ -32,7 +32,8 @@ export class RestProvider {
     });
   }
 
-  getheadlinebaru() {
+
+  getHeadlinebaru() {
     return new Promise(resolve => {
       this.http.get(this.apiUrl + '/getheadlinebaru').subscribe(data => {
         resolve(data);
@@ -41,7 +42,6 @@ export class RestProvider {
       });
     });
   }
-
 
   getNasional() {
     return new Promise(resolve => {
