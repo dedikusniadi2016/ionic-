@@ -5,6 +5,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { NasionalPage } from '../pages/nasional/nasional';
+import { BisnisPage } from '../pages/bisnis/bisnis';
+import { WisataPage } from '../pages/wisata/wisata';
+import { OtomotifPage } from '../pages/otomotif/otomotif';
+import { GadgetPage } from '../pages/gadget/gadget';
+import { OlahragaPage } from '../pages/olahraga/olahraga';
+import { VideoPage } from '../pages/video/video';
+import { FotoPage } from '../pages/foto/foto';
+import { JabarPage } from '../pages/jabar/jabar';
 
 @Component({
   templateUrl: 'app.html'
@@ -22,7 +31,15 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Kabar Jabar', component: JabarPage },
+      { title: 'Kabar Nasional', component: NasionalPage },
+      { title: 'Bisnis', component: BisnisPage },
+      { title: 'Wisata', component: WisataPage },
+      { title: 'Otomotif', component: OtomotifPage },
+      { title: 'Gadget', component: GadgetPage },
+      { title: 'Olahraga', component: OlahragaPage },
+      { title: 'Foto', component: FotoPage },
+      { title: 'Video',component: VideoPage }
     ];
 
   }

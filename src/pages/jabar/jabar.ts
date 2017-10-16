@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 
+@IonicPage()
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-jabar',
+  templateUrl: 'jabar.html',
 })
-export class HomePage {
+export class JabarPage {
 
   users: any;
 
@@ -23,3 +24,6 @@ export class HomePage {
   }
 
 }
+
+
+
