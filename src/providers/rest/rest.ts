@@ -35,7 +35,7 @@ export class RestProvider {
 
   getBisnis() {
     return new Promise(resolve => {
-      this.http.get(this.apiUrl+'getbisnis').subscribe(data => {
+      this.http.get(this.apiUrl+'/getbisnis').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
@@ -45,7 +45,7 @@ export class RestProvider {
 
   getWisata() {
     return new Promise(resolve => {
-      this.http.get(this.apiUrl + 'getwisata').subscribe(data => {
+      this.http.get(this.apiUrl + '/getwisata').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
@@ -56,7 +56,7 @@ export class RestProvider {
 
   getOtomotif() {
     return new Promise(resolve => {
-      this.http.get(this.apiUrl + 'getotomotif').subscribe(data => {
+      this.http.get(this.apiUrl + '/getotomotif').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
@@ -66,7 +66,7 @@ export class RestProvider {
 
   getGadget() {
     return new Promise(resolve => {
-      this.http.get(this.apiUrl + 'getgadget').subscribe(data => {
+      this.http.get(this.apiUrl + '/getgadget').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
@@ -77,7 +77,7 @@ export class RestProvider {
 
   getOlahraga() {
     return new Promise(resolve => {
-      this.http.get(this.apiUrl + 'getolahraga').subscribe(data => {
+      this.http.get(this.apiUrl + '/getolahraga').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
@@ -87,7 +87,7 @@ export class RestProvider {
 
   getFoto() {
     return new Promise(resolve => {
-      this.http.get(this.apiUrl + 'getfoto').subscribe(data => {
+      this.http.get(this.apiUrl + '/getfoto').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
@@ -98,7 +98,7 @@ export class RestProvider {
 
   getVideo() {
     return new Promise(resolve => {
-      this.http.get(this.apiUrl + 'getvideo').subscribe(data => {
+      this.http.get(this.apiUrl + '/getvideo').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);

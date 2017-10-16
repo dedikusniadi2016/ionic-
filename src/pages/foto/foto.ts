@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { RestProvider } from '../../providers/rest/rest';
 
 /**
  * Generated class for the FotoPage page.
@@ -15,11 +16,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FotoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  users: any;
+
+  constructor(public navCtrl: NavController, public restProvider: RestProvider) {
+    this.getFoto();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad FotoPage');
+  getFoto() {
+    this.restProvider.getFoto()
+      .then(data => {
+        this.users = data;
+        console.log(this.users);
+      });
   }
 
 }

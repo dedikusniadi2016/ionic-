@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { RestProvider } from '../../providers/rest/rest';
+
 
 /**
  * Generated class for the OlahragaPage page.
@@ -14,12 +16,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'olahraga.html',
 })
 export class OlahragaPage {
+  users: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public restProvider: RestProvider) {
+    this.getOlahraga();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad OlahragaPage');
+  getOlahraga() {
+    this.restProvider.getOlahraga()
+      .then(data => {
+        this.users = data;
+        console.log(this.users);
+      });
   }
 
 }
