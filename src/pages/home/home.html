@@ -8,20 +8,10 @@
 </ion-header>
 
 <ion-content>
-    <ion-item *ngFor="let user of users">
-        <ion-thumbnail item-left>
-            <img style="width: 100%; height:100%;" [src]="user.post_image_content">
-        </ion-thumbnail>
-    </ion-item>
-    <div class="item item-divider">
-        Berita Terbaru
-    </div>
-    <ion-item *ngFor="let user of users">
+    <ion-item text-wrap *ngFor="let user of users" (click)="openNavDetailsPage(user.post_id)">
         <ion-thumbnail item-left>
             <img [src]="user.post_image_thumb">
         </ion-thumbnail>
         <h2 [innerText]="user.post_title"></h2>
-        <p>{{user.post_name}}</p>
     </ion-item>
-
 </ion-content>

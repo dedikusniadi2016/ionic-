@@ -13,14 +13,11 @@
     </ion-navbar>
 </ion-header>
 
-
-
 <ion-content>
-    <ion-item *ngFor="let user of users">
+    <ion-item text-wrap *ngFor="let user of users">
         <ion-thumbnail item-left>
             <img [src]="user.post_image_thumb">
         </ion-thumbnail>
         <h2 [innerText]="user.post_title"></h2>
-        <p>{{user.post_name}}</p>
     </ion-item>
 </ion-content>

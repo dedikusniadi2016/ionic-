@@ -20,6 +20,8 @@ import { OlahragaPage } from '../pages/olahraga/olahraga';
 import { VideoPage } from '../pages/video/video';
 import { FotoPage } from '../pages/foto/foto';
 import { JabarPage } from '../pages/jabar/jabar';
+import {DetailPage} from '../pages/detail/detail';
+
 
 
 
@@ -36,7 +38,8 @@ import { JabarPage } from '../pages/jabar/jabar';
     OlahragaPage,
     VideoPage,
     FotoPage,
-    JabarPage
+    JabarPage,
+    DetailPage
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,8 @@ import { JabarPage } from '../pages/jabar/jabar';
     OlahragaPage,
     VideoPage,
     FotoPage,
-    JabarPage
+    JabarPage,
+    DetailPage
   ],
   providers: [
     StatusBar,
