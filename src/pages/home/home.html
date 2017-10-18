@@ -20,20 +20,12 @@
 
     </div>
 
-    <ion-list>
-        <ion-item text-wrap *ngFor="let user of users" (click)="openNavDetailsPage(user.post_id)">
-            <ion-thumbnail item-left>
-                <img [src]="user.post_image_thumb">
-            </ion-thumbnail>
-            <h2 [innerText]="user.post_title"></h2>
-            <p> {{user.tanggal}} {{user.post_date}} </p>
-        </ion-item>
-    </ion-list>
-
-    <ion-infinite-scroll (ionInfinite)="$event.waitFor(doInfinite())">
-        <ion-infinite-scroll-content></ion-infinite-scroll-content>
-    </ion-infinite-scroll>
-
-
+    <ion-item text-wrap *ngFor="let user of users" (click)="openNavDetailsPage(user.post_id)">
+        <ion-thumbnail item-left>
+            <img [src]="user.post_image_thumb">
+        </ion-thumbnail>
+        <h2 [innerText]="user.post_title"></h2>
+        <p> {{user.tanggal}} {{user.post_date}} </p>
+    </ion-item>
 
 </ion-content>

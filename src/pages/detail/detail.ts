@@ -17,21 +17,14 @@ import { Post_id} from '../../providers/providers'
   templateUrl: 'detail.html',
 })
 export class DetailPage {
+  getdata: any;
   users: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider,public post_id: Post_id ) {
-    this.getUsers();
 
-    this.post_id = navParams.get('getjabar') || post_id.defaultItem;
+    this.getdata = navParams.get('post_id') || post_id.defaultItem;
 
-  }
 
-  getUsers() {
-    this.restProvider.getUsers()
-      .then(data => {
-        this.users = data;
-        console.log(this.users);
-      });
   }
 
 }

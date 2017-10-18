@@ -25,19 +25,6 @@ export class RestProvider {
     });
   }
 
-  query(params?: any) {
-    return this.api.get('/getjabar', params);
-  }
-
-  get(endpoint: string, params?: any, reqOpts?: any) {
-    if (!reqOpts) {
-      reqOpts = {
-        params: new HttpParams()
-      };
-    }
-  }
-
-
   getHeadline() {
     return new Promise(resolve => {
       this.http.get(this.apiUrl + '/getheadline').subscribe(data => {

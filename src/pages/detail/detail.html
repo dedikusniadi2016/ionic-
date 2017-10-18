@@ -30,15 +30,18 @@
 <ion-header>
 
     <ion-navbar>
-        <ion-title>{{ post_id.category_name }}</ion-title>
+        <ion-title>{{ getdata.post_image_caption }}</ion-title>
     </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
-    <div class="item-detail" padding>
-        <h2>{{post_id.category_name}}</h2>
-        <p>{{post_id.category_name}}</p>
+
+    <div class="bold">
+        {{ post_id.post_image_caption }}
+
     </div>
+
+
 </ion-content>
