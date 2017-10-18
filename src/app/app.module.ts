@@ -21,9 +21,8 @@ import { VideoPage } from '../pages/video/video';
 import { FotoPage } from '../pages/foto/foto';
 import { JabarPage } from '../pages/jabar/jabar';
 import {DetailPage} from '../pages/detail/detail';
-
-
-
+import { Api } from '../providers/providers';
+import { Post_id } from '../providers/providers';
 
 @NgModule({
   declarations: [
@@ -63,6 +62,8 @@ import {DetailPage} from '../pages/detail/detail';
     DetailPage
   ],
   providers: [
+    Api,
+    Post_id,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},

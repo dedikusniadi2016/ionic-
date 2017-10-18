@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 
+import { Post_id} from '../../providers/providers'
 
 /**
  * Generated class for the DetailPage page.
@@ -17,8 +18,12 @@ import { RestProvider } from '../../providers/rest/rest';
 })
 export class DetailPage {
   users: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider) {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider,public post_id: Post_id ) {
     this.getUsers();
+
+    this.post_id = navParams.get('getjabar') || post_id.defaultItem;
+
   }
 
   getUsers() {

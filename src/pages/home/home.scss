@@ -4,4 +4,24 @@ page-home {
         height: auto;
         font-size: 20px;
     }
+    .box {
+        width: auto;
+        height: 20px;
+        box-sizing: border-box;
+        background-color: #00008B;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+    }
+    .headers {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    h3 {
+        position: absolute;
+        top: 200px;
+        left: 0;
+        width: 100%;
+    }
 }

@@ -3,3 +3,26 @@ page-home .item-divider {
   height: auto;
   font-size: 20px;
 }
+
+page-home .box {
+  width: auto;
+  height: 20px;
+  box-sizing: border-box;
+  background-color: #00008B;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+page-home .headers {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+page-home h3 {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 100%;
+}
