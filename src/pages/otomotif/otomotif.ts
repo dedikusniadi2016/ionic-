@@ -17,9 +17,11 @@ import { RestProvider } from '../../providers/rest/rest';
 export class OtomotifPage {
 
   users: any;
+  headlines : any;
 
   constructor(public navCtrl: NavController, public restProvider: RestProvider) {
     this.getOtomotif();
+    this.getotomotifheadline();
   }
 
   getOtomotif() {
@@ -28,6 +30,14 @@ export class OtomotifPage {
         this.users = data;
         console.log(this.users);
       });
+  }
+
+  getotomotifheadline() {
+    this.restProvider.getotomotifheadline()
+    .then(data => {
+      this.headlines = data;
+      console.log(this.headlines);
+    });
   }
 
 }

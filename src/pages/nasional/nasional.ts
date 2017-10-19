@@ -16,10 +16,12 @@ import {RestProvider} from '../../providers/rest/rest';
 export class NasionalPage {
 
   users: any;
+  headlines: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public restProvider: RestProvider) {
 
     this.getNasional();
+    this.getkabarnasionalheadline();
 
   }
 
@@ -30,6 +32,17 @@ export class NasionalPage {
       console.log(this.users);
     });
   }
+
+  getkabarnasionalheadline() {
+    this.restProvider.getkabarnasionalheadline()
+      .then(data => {
+        this.headlines = data;
+        console.log(this.headlines);
+      });
+  }
+
+
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NasionalPage');

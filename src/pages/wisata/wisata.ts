@@ -2,13 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 
-/**
- * Generated class for the WisataPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-wisata',
@@ -17,9 +10,11 @@ import { RestProvider } from '../../providers/rest/rest';
 export class WisataPage {
 
   users: any;
+  headlines : any;
 
   constructor(public navCtrl: NavController, public restProvider: RestProvider) {
     this.getWisata();
+    this.getwisataheadline();
   }
 
   getWisata() {
@@ -28,6 +23,14 @@ export class WisataPage {
         this.users = data;
         console.log(this.users);
       });
+  }
+
+  getwisataheadline() {
+    this.restProvider.getwisataheadline()
+    .then(data => {
+      this.headlines = data;
+      console.log(this.headlines);
+    });
   }
 
 }

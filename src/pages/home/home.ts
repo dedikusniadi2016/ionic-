@@ -16,6 +16,7 @@ export class HomePage {
   constructor(public navCtrl: NavController, public restProvider: RestProvider, public post_id : Post_id) {
     this.getUsers();
     this.getHeadlinebaru();
+
   }
 
   openNavDetailsPage(post_id) {

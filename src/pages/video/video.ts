@@ -17,9 +17,11 @@ import { RestProvider } from '../../providers/rest/rest';
 export class VideoPage {
 
   users: any;
+  headlines : any;
 
   constructor(public navCtrl: NavController, public restProvider: RestProvider) {
     this.getVideo();
+    this.getvideoheadline();
   }
 
   getVideo() {
@@ -28,6 +30,14 @@ export class VideoPage {
         this.users = data;
         console.log(this.users);
       });
+  }
+
+  getvideoheadline() {
+    this.restProvider.getvideoheadline()
+    .then(data => {
+      this.headlines = data;
+      console.log(this.headlines);
+    });
   }
 
 }

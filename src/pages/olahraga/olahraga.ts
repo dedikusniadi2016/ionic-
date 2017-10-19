@@ -17,9 +17,11 @@ import { RestProvider } from '../../providers/rest/rest';
 })
 export class OlahragaPage {
   users: any;
+  headlines : any;
 
   constructor(public navCtrl: NavController, public restProvider: RestProvider) {
     this.getOlahraga();
+    this.getolahragaheadline();
   }
 
   getOlahraga() {
@@ -28,6 +30,14 @@ export class OlahragaPage {
         this.users = data;
         console.log(this.users);
       });
+  }
+
+  getolahragaheadline() {
+    this.restProvider.getolahragaheadline()
+    .then(data => {
+      this.headlines = data;
+      console.log(this.headlines);
+    });
   }
 
 }
