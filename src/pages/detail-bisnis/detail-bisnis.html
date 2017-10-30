@@ -1,0 +1,41 @@
+<ion-header>
+
+    <ion-navbar color='primary'>
+        <ion-title></ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <div class="bold">
+
+        {{item.post_title}}
+
+    </div>
+
+    <div>
+        {{item.nama}}
+    </div>
+
+
+    <div>
+
+        {{item.tanggal}} {{item.post_date}}
+
+    </div>
+
+    <div>
+        <img src={{item.post_image_thumb}}>
+
+    </div>
+
+    <div>
+
+        <div [innerText]="item.post_content"> </div>
+
+    </div>
+
+
+</ion-content>

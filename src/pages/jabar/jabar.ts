@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
+import {DetailJabarPage} from '../detail-jabar/detail-jabar';
 
 @IonicPage()
 @Component({
@@ -23,6 +24,10 @@ export class JabarPage {
         this.users = data;
         console.log(this.users);
       });
+  }
+
+    openNavDetailsPage(headline) {
+    this.navCtrl.push(DetailJabarPage, { itemHeadline: headline })
   }
 
   getJabarHeadline() {

@@ -20,7 +20,19 @@ import { OlahragaPage } from '../pages/olahraga/olahraga';
 import { VideoPage } from '../pages/video/video';
 import { FotoPage } from '../pages/foto/foto';
 import { JabarPage } from '../pages/jabar/jabar';
+
 import {DetailPage} from '../pages/detail/detail';
+import {DetailBisnisPage} from '../pages/detail-bisnis/detail-bisnis';
+import {DetailFotoPage} from '../pages/detail-foto/detail-foto';
+import {DetailGadgetPage} from '../pages/detail-gadget/detail-gadget';
+import {DetailJabarPage} from '../pages/detail-jabar/detail-jabar';
+import {DetailNasionalPage} from '../pages/detail-nasional/detail-nasional';
+import {DetailOlahragaPage} from '../pages/detail-olahraga/detail-olahraga';
+import {DetailOtomotifPage} from '../pages/detail-otomotif/detail-otomotif';
+import {DetailVideoPage} from '../pages/detail-video/detail-video';
+import {DetailWisataPage} from '../pages/detail-wisata/detail-wisata';
+
+
 import { Api } from '../providers/providers';
 import { Post_id } from '../providers/providers';
 
@@ -39,7 +51,15 @@ import { Post_id } from '../providers/providers';
     VideoPage,
     FotoPage,
     JabarPage,
-    DetailPage
+    DetailPage,
+    DetailBisnisPage,
+    DetailFotoPage,
+    DetailJabarPage,
+    DetailNasionalPage,
+    DetailOlahragaPage,
+    DetailOtomotifPage,
+    DetailVideoPage,
+    DetailWisataPage
   ],
   imports: [
     BrowserModule,
@@ -60,7 +80,15 @@ import { Post_id } from '../providers/providers';
     VideoPage,
     FotoPage,
     JabarPage,
-    DetailPage
+    DetailPage,
+    DetailBisnisPage,
+    DetailFotoPage,
+    DetailJabarPage,
+    DetailNasionalPage,
+    DetailOlahragaPage,
+    DetailOtomotifPage,
+    DetailVideoPage,
+    DetailWisataPage
   ],
   providers: [
     Api,
