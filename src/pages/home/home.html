@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar>
+    <ion-navbar color='primary'>
         <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -9,22 +9,22 @@
 
 <ion-content>
 
-    <ion-item text-wrap *ngFor="let headline of headlines" (click)="openNavDetailsPage(headline.post_id)">
-        <img [src]=" headline.post_image_content ">
+    <ion-item text-wrap *ngFor="let headline of headlines" (click)="openNavDetailsPage(headline)">
+        <img [src]=" headline.post_image_content">
     </ion-item>
 
 
-    <div class="box ">
+    <div class="box">
 
         Berita Terbaru
 
     </div>
 
-    <ion-item text-wrap *ngFor="let headline1 of headliness " (click)="openNavDetailsPage(headline1.post_id) ">
+    <ion-item text-wrap *ngFor="let headline1 of headliness" (click)="openNavDetailsPage(headline1)">
         <ion-thumbnail item-left>
-            <img [src]="headline1.post_image_thumb ">
+            <img [src]="headline1.post_image_thumb">
         </ion-thumbnail>
-        <h2 [innerText]="headline1.post_title "></h2>
+        <h2 [innerText]="headline1.post_title"></h2>
         <p> {{headline1.tanggal}} {{headline1.post_date}} </p>
     </ion-item>
 

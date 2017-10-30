@@ -1,36 +1,7 @@
-<!--
-  Generated template for the DetailPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<!-- <ion-header>
-
-    <ion-navbar>
-        <ion-title>detail</ion-title>
-    </ion-navbar>
-
-</ion-header>
-
-
-<ion-content>
-
-    <ion-card *ngFor="let user of users">
-
-        <div *ngIf="user.post_id">
-
-            {{user.post_title}}
-
-        </div>
-    </ion-card>
-
-</ion-content> -->
-
-
 <ion-header>
 
-    <ion-navbar>
-        <ion-title>{{ post_id }}</ion-title>
+    <ion-navbar color='primary'>
+        <ion-title></ion-title>
     </ion-navbar>
 
 </ion-header>
@@ -40,7 +11,29 @@
 
     <div class="bold">
 
-        {{post_title}}
+        {{item.post_title}}
+
+    </div>
+
+    <div>
+        {{item.nama}}
+    </div>
+
+
+    <div>
+
+        {{item.tanggal}} {{item.post_date}}
+
+    </div>
+
+    <div>
+        <img src={{item.post_image_thumb}}>
+
+    </div>
+
+    <div>
+
+        <div [innerText]="item.post_content"> </div>
 
     </div>
 

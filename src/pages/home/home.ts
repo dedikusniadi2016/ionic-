@@ -20,8 +20,8 @@ export class HomePage {
 
   }
 
-  openNavDetailsPage(post_id) {
-    this.navCtrl.push(DetailPage,{post_id: post_id})
+  openNavDetailsPage(headline) {
+    this.navCtrl.push(DetailPage, { itemHeadline: headline })
   }
 
   getHeadline() {
