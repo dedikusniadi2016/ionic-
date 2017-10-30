@@ -20,12 +20,12 @@
 
     </div>
 
-    <ion-item text-wrap *ngFor="let user of users " (click)="openNavDetailsPage(user.post_id) ">
+    <ion-item text-wrap *ngFor="let headline1 of headliness " (click)="openNavDetailsPage(headline1.post_id) ">
         <ion-thumbnail item-left>
-            <img [src]="user.post_image_thumb ">
+            <img [src]="headline1.post_image_thumb ">
         </ion-thumbnail>
-        <h2 [innerText]="user.post_title "></h2>
-        <p> {{user.tanggal}} {{user.post_date}} </p>
+        <h2 [innerText]="headline1.post_title "></h2>
+        <p> {{headline1.tanggal}} {{headline1.post_date}} </p>
     </ion-item>
 
 </ion-content>

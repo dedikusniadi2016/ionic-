@@ -23,7 +23,6 @@ import { JabarPage } from '../pages/jabar/jabar';
 import {DetailPage} from '../pages/detail/detail';
 import { Api } from '../providers/providers';
 import { Post_id } from '../providers/providers';
-import { Post_title } from '../providers/providers';
 
 
 @NgModule({
@@ -66,7 +65,6 @@ import { Post_title } from '../providers/providers';
   providers: [
     Api,
     Post_id,
-    Post_title,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},

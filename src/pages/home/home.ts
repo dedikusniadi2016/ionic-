@@ -11,6 +11,7 @@ import {Post_id} from '../../providers/providers';
 })
 export class HomePage {
   users: any;
+  headliness:any;
   headlines : any;
 
   constructor(public navCtrl: NavController, public restProvider: RestProvider, public post_id : Post_id) {
@@ -26,8 +27,8 @@ export class HomePage {
   getHeadline() {
     this.restProvider.getHeadline()
       .then(data => {
-        this.users = data;
-        console.log(this.users);
+        this.headliness = data;
+        console.log(this.headliness);
       });
   }
 

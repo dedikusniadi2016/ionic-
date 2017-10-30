@@ -22,7 +22,7 @@
         Kabar Nasional
     </div>
 
-    <ion-item text-wrap *ngFor="let user of users">
+    <ion-item text-wrap *ngFor="let user of users" (click)="openNavDetailsPage(user.post_id)">
         <ion-thumbnail item-left>
             <img [src]="user.post_image_thumb">
         </ion-thumbnail>

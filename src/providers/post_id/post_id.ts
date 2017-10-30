@@ -12,7 +12,7 @@ export class Post_id {
    }
 
   query(params?: any) {
-    return this.api.get('/post_title', params);
+    return this.api.get('/post_id', params);
   }
 
 

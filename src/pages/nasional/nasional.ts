@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {RestProvider} from '../../providers/rest/rest';
+import { DetailPage } from '../detail/detail';
+
 /**
  * Generated class for the NasionalPage page.
  *
@@ -42,6 +44,9 @@ export class NasionalPage {
   }
 
 
+  openNavDetailsPage(post_id) {
+    this.navCtrl.push(DetailPage, { post_id: post_id })
+  }
 
 
   ionViewDidLoad() {
