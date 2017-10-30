@@ -9,22 +9,22 @@
 
 <ion-content>
 
-    <ion-item text-wrap *ngFor="let headline of headlines">
-        <img [src]="headline.post_image_content">
+    <ion-item text-wrap *ngFor="let headline of headlines" (click)="openNavDetailsPage(headline.post_id)">
+        <img [src]=" headline.post_image_content ">
     </ion-item>
 
 
-    <div class="box">
+    <div class="box ">
 
         Berita Terbaru
 
     </div>
 
-    <ion-item text-wrap *ngFor="let user of users" (click)="openNavDetailsPage(user.post_id)">
+    <ion-item text-wrap *ngFor="let user of users " (click)="openNavDetailsPage(user.post_id) ">
         <ion-thumbnail item-left>
-            <img [src]="user.post_image_thumb">
+            <img [src]="user.post_image_thumb ">
         </ion-thumbnail>
-        <h2 [innerText]="user.post_title"></h2>
+        <h2 [innerText]="user.post_title "></h2>
         <p> {{user.tanggal}} {{user.post_date}} </p>
     </ion-item>
 

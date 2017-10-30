@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 import {DetailPage} from '../detail/detail';
 
@@ -14,7 +14,7 @@ export class HomePage {
   headlines : any;
 
   constructor(public navCtrl: NavController, public restProvider: RestProvider, public post_id : Post_id) {
-    this.getUsers();
+    this.getHeadline();
     this.getHeadlinebaru();
 
   }
@@ -23,8 +23,8 @@ export class HomePage {
     this.navCtrl.push(DetailPage,{post_id: post_id})
   }
 
-  getUsers() {
-    this.restProvider.getUsers()
+  getHeadline() {
+    this.restProvider.getHeadline()
       .then(data => {
         this.users = data;
         console.log(this.users);
