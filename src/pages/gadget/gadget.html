@@ -14,6 +14,11 @@
 </ion-header>
 
 <ion-content>
+
+    <ion-item text-wrap *ngFor="let headline of headlines">
+        <img [src]="headline.post_image_content">
+    </ion-item>
+
     <ion-item text-wrap *ngFor="let user of users">
         <ion-thumbnail item-left>
             <img [src]="user.post_image_thumb">

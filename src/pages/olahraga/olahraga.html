@@ -16,7 +16,7 @@
 
 <ion-content>
 
-    <ion-item text-wrap *ngFor="let headline of headlines" (click)="openNavDetailsPage(headline)">
+    <ion-item text-wrap *ngFor="let headline of headlines">
         <img [src]=" headline.post_image_content">
     </ion-item>
 

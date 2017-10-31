@@ -141,7 +141,7 @@ export class RestProvider {
 
   getotomotifheadline() {
     return new Promise(resolve => {
-      this.http.get(this.apiUrl + 'getotomotifheadline').subscribe(data => {
+      this.http.get(this.apiUrl + '/getotomotifheadline').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
@@ -184,7 +184,7 @@ export class RestProvider {
 
   getolahragaheadline() {
     return new Promise(resolve => {
-      this.http.get(this.apiUrl + 'getolahragaheadline').subscribe(data => {
+      this.http.get(this.apiUrl + '/getolahragaheadline').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
@@ -214,7 +214,7 @@ export class RestProvider {
 
   getfoto2() {
     return new Promise(resolve => {
-      this.http.get(this.apiUrl + 'getfoto2').subscribe(data => {
+      this.http.get(this.apiUrl + '/getfoto2').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
@@ -235,7 +235,7 @@ export class RestProvider {
 
   getvideoheadline() {
     return new Promise(resolve => {
-      this.http.get(this.apiUrl + 'getvideoheadline').subscribe(data => {
+      this.http.get(this.apiUrl + '/getvideoheadline').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
