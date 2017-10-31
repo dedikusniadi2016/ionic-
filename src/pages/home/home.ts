@@ -3,8 +3,6 @@ import { NavController } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 import {DetailPage} from '../detail/detail';
 
-import {Post_id} from '../../providers/providers';
-
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -14,7 +12,7 @@ export class HomePage {
   headliness:any;
   headlines : any;
 
-  constructor(public navCtrl: NavController, public restProvider: RestProvider, public post_id : Post_id) {
+  constructor(public navCtrl: NavController, public restProvider: RestProvider) {
     this.getHeadline();
     this.getHeadlinebaru();
 

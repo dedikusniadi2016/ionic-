@@ -15,7 +15,13 @@
 
 
 <ion-content>
-    <ion-item text-wrap *ngFor="let user of users">
+
+    <ion-item text-wrap *ngFor="let headline of headlines" (click)="openNavDetailsPage(headline)">
+        <img [src]=" headline.post_image_content">
+    </ion-item>
+
+
+    <ion-item text-wrap *ngFor="let user of users" (click)="openNavDetailsPage(user)">
         <ion-thumbnail item-left>
             <img [src]="user.post_image_thumb">
         </ion-thumbnail>

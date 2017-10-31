@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
+import { DetailVideoPage } from '../detail-video/detail-video';
+
 
 /**
  * Generated class for the VideoPage page.
@@ -38,6 +40,10 @@ export class VideoPage {
       this.headlines = data;
       console.log(this.headlines);
     });
+  }
+
+  openNavDetailsPage(headline) {
+    this.navCtrl.push(DetailVideoPage, { itemHeadline: headline })
   }
 
 }

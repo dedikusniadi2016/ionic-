@@ -7,24 +7,18 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content class="batas">
 
-    <div class="bold">
+    <div class="center">
 
         {{item.post_title}}
 
     </div>
 
-    <div>
-        {{item.nama}}
+    <div class="left">
+        {{item.nama}} {{item.tanggal}} {{item.post_date}}
     </div>
 
-
-    <div>
-
-        {{item.tanggal}} {{item.post_date}}
-
-    </div>
 
     <div>
         <img src={{item.post_image_thumb}}>
@@ -33,7 +27,10 @@
 
     <div>
 
-        <div [innerText]="item.post_content"> </div>
+        <!-- <div [innerText]="item.post_content"> </div> -->
+
+        <p [innerHtml]="item.post_content"></p>
+
 
     </div>
 

@@ -14,7 +14,7 @@
 </ion-header>
 
 <ion-content>
-    <ion-item text-wrap *ngFor="let headline of headlines" (click)="openNavDetailsPage(headline)">
+    <ion-item text-wrap *ngFor="let headline of headlines" (click)="openNavDetailJabarPage(headline)">
         <img [src]="headline.post_image_content">
     </ion-item>
 
@@ -22,7 +22,7 @@
         Kabar Jabar
     </div>
 
-    <ion-item text-wrap *ngFor="let user of users" (click)="openNavDetailsPage(user)">>
+    <ion-item text-wrap *ngFor="let user of users" (click)="openNavDetailJabarPage(user)">
         <ion-thumbnail item-left>
             <img [src]="user.post_image_thumb">
         </ion-thumbnail>

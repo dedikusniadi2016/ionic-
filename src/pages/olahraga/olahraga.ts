@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 
+import { DetailOlahragaPage } from '../detail-olahraga/detail-olahraga';
+
+
 
 /**
  * Generated class for the OlahragaPage page.
@@ -38,6 +41,10 @@ export class OlahragaPage {
       this.headlines = data;
       console.log(this.headlines);
     });
+  }
+
+  openNavDetailsPage(headline) {
+    this.navCtrl.push(DetailOlahragaPage, { itemHeadline: headline })
   }
 
 }

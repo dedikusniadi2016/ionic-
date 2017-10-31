@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
-import { Api } from '../api/api';
 
 @Injectable()
 export class RestProvider {
 
   apiUrl = 'http://services.bisnis.com/bdg/category';
 
-  constructor(public http: HttpClient, public api: Api) {
+  constructor(public http: HttpClient) {
     console.log('Hello RestProvider Provider');
   }
 
@@ -191,6 +190,16 @@ export class RestProvider {
         console.log(err);
       });
     });
+  }
+
+  getfotoheadline() {
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + '/getfotoheadline').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    })
   }
 
   getFoto() {

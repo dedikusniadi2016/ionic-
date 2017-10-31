@@ -17,9 +17,11 @@ import { RestProvider } from '../../providers/rest/rest';
 export class FotoPage {
 
   users: any;
+  headlines : any;
 
   constructor(public navCtrl: NavController, public restProvider: RestProvider) {
     this.getFoto();
+    this.getfotoheadline();
   }
 
   getFoto() {
@@ -28,6 +30,15 @@ export class FotoPage {
         this.users = data;
         console.log(this.users);
       });
+  }
+
+  getfotoheadline() {
+    this.restProvider.getfotoheadline()
+    .then(data => {
+      this.headlines = data;
+      console.log(this.headlines);
+    });
+
   }
 
 }

@@ -4,10 +4,9 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
 import { RestProvider } from '../providers/rest/rest';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -25,6 +24,7 @@ import {DetailPage} from '../pages/detail/detail';
 import {DetailBisnisPage} from '../pages/detail-bisnis/detail-bisnis';
 import {DetailFotoPage} from '../pages/detail-foto/detail-foto';
 import {DetailGadgetPage} from '../pages/detail-gadget/detail-gadget';
+
 import {DetailJabarPage} from '../pages/detail-jabar/detail-jabar';
 import {DetailNasionalPage} from '../pages/detail-nasional/detail-nasional';
 import {DetailOlahragaPage} from '../pages/detail-olahraga/detail-olahraga';
@@ -33,15 +33,10 @@ import {DetailVideoPage} from '../pages/detail-video/detail-video';
 import {DetailWisataPage} from '../pages/detail-wisata/detail-wisata';
 
 
-import { Api } from '../providers/providers';
-import { Post_id } from '../providers/providers';
-
-
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
     NasionalPage,
     BisnisPage,
     WisataPage,
@@ -64,13 +59,12 @@ import { Post_id } from '../providers/providers';
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     NasionalPage,
     BisnisPage,
     WisataPage,
@@ -91,8 +85,6 @@ import { Post_id } from '../providers/providers';
     DetailWisataPage
   ],
   providers: [
-    Api,
-    Post_id,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},

@@ -26,7 +26,7 @@ export class JabarPage {
       });
   }
 
-    openNavDetailsPage(headline) {
+  openNavDetailJabarPage(headline) {
     this.navCtrl.push(DetailJabarPage, { itemHeadline: headline })
   }
 

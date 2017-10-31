@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { RestProvider } from '../../providers/rest/rest';
+
 
 /**
  * Generated class for the DetailNasionalPage page.
@@ -15,11 +17,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DetailNasionalPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  defaultItems: any;
+  users: any;
+  item: any;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DetailNasionalPage');
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider) {
 
+    this.item = navParams.get('itemHeadline');
+    console.log(this.item);
+
+
+  }
 }
