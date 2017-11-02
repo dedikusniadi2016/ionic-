@@ -23,6 +23,7 @@ import { JabarPage } from '../pages/jabar/jabar';
 import {DetailPage} from '../pages/detail/detail';
 import {DetailBisnisPage} from '../pages/detail-bisnis/detail-bisnis';
 import {DetailFotoPage} from '../pages/detail-foto/detail-foto';
+
 import {DetailGadgetPage} from '../pages/detail-gadget/detail-gadget';
 
 import {DetailJabarPage} from '../pages/detail-jabar/detail-jabar';
@@ -31,6 +32,10 @@ import {DetailOlahragaPage} from '../pages/detail-olahraga/detail-olahraga';
 import {DetailOtomotifPage} from '../pages/detail-otomotif/detail-otomotif';
 import {DetailVideoPage} from '../pages/detail-video/detail-video';
 import {DetailWisataPage} from '../pages/detail-wisata/detail-wisata';
+
+
+import { CacheModule } from 'ionic-cache';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -54,12 +59,15 @@ import {DetailWisataPage} from '../pages/detail-wisata/detail-wisata';
     DetailOlahragaPage,
     DetailOtomotifPage,
     DetailVideoPage,
+    DetailGadgetPage,
     DetailWisataPage
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    CacheModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -82,6 +90,7 @@ import {DetailWisataPage} from '../pages/detail-wisata/detail-wisata';
     DetailOlahragaPage,
     DetailOtomotifPage,
     DetailVideoPage,
+    DetailGadgetPage,
     DetailWisataPage
   ],
   providers: [

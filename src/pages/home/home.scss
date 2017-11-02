@@ -25,10 +25,10 @@ page-home {
         width: 100%;
     }
     .image {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
         height: auto;
         width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }

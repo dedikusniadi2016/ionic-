@@ -64,6 +64,100 @@ export class RestProvider {
   }
 
 
+getheadlinesecond() {
+  return new Promise(resolve => {
+    this.http.get(this.apiUrl + '/getheadlinesecond').subscribe(data => {
+      resolve(data);
+    }, err => {
+      console.log(err);
+    });
+  });
+}
+
+
+  getheadlinethree() {
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + '/getheadlinethree').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+  getheadlinefour() {
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + '/getheadlinefour').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+  getheadlinefive() {
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + '/getheadlinefive').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+
+  getheadlinesix() {
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + '/getheadlinesix').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+  getheadlineseven(){
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + '/getheadlineseven').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+
+  getheadlineeight() {
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + '/getheadlineeight').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+  getheadlinenine() {
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + '/getheadlinenine').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+  getheadlineten() {
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + '/getheadlineten').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+
   getkabarnasionalheadline() {
     return new Promise(resolve => {
       this.http.get(this.apiUrl + '/getkabarnasionalheadline').subscribe(data => {

@@ -13,6 +13,8 @@ import { OlahragaPage } from '../pages/olahraga/olahraga';
 import { VideoPage } from '../pages/video/video';
 import { FotoPage } from '../pages/foto/foto';
 import { JabarPage } from '../pages/jabar/jabar';
+import { CacheService } from "ionic-cache";
+
 
 @Component({
   templateUrl: 'app.html'
@@ -24,7 +26,11 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public cache: CacheService) {
+
+    cache.setDefaultTTL(60 * 60 * 12);
+    cache.setOfflineInvalidate(false);
+
     this.initializeApp();
 
     // used for an example of ngFor and navigation

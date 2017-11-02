@@ -12,3 +12,8 @@ page-detail .center {
 page-detail .left {
   text-align: left;
 }
+
+page-detail .image {
+  height: auto;
+  width: 100%;
+}

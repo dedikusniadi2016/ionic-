@@ -21,13 +21,17 @@
 
 
     <div>
-        <img src={{item.post_image_thumb}}>
+        <img class="image" src={{item.post_image_content}}>
 
     </div>
 
     <div>
 
-        <!-- <div [innerText]="item.post_content"> </div> -->
+        {{item.post_image_caption}}
+
+    </div>
+
+    <div>
 
         <p [innerHtml]="item.post_content"></p>
 

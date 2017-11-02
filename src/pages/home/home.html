@@ -9,23 +9,151 @@
 
 <ion-content>
 
-    <ion-item text-wrap *ngFor="let headline of headlines" (click)="openNavDetailsPage(headline)">
-        <img class="image" [src]=" headline.post_image_content">
-    </ion-item>
+    <ion-card *ngFor="let headline of headlines" (click)="openNavDetailsPage(headline)">
 
+        <ion-card-content>
+            <p> {{ headline.post_title }}</p>
+        </ion-card-content>
 
-    <div class="box">
-
-        Berita Terbaru
-
-    </div>
+        <ion-item text-wrap>
+            <img class="image" [src]=" headline.post_image_content">
+        </ion-item>
+    </ion-card>
 
     <ion-item text-wrap *ngFor="let headline1 of headliness" (click)="openNavDetailsPage(headline1)">
         <ion-thumbnail item-left>
             <img [src]="headline1.post_image_thumb">
         </ion-thumbnail>
         <h2 [innerText]="headline1.post_title"></h2>
-        <p> {{headline1.tanggal}} {{headline1.post_date}} </p>
+        <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div> Likes</div>
+      </button>
+        <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div> Comments</div>
+      </button>
     </ion-item>
+
+
+    <ion-card *ngFor="let headline2 of headlinesecond" (click)="openNavDetailsPage(headline2)">
+        <ion-card-content>
+            <p> {{headline2.post_title}}</p>
+        </ion-card-content>
+        <ion-item text-wrap>
+            <img class="image" [src]="headline2.post_image_content">
+        </ion-item>
+    </ion-card>
+
+
+    <ion-item text-wrap *ngFor="let headline3 of headlinethree" (click)="openNavDetailsPage(headline3)">
+        <ion-thumbnail item-left>
+            <img [src]="headline3.post_image_thumb">
+        </ion-thumbnail>
+        <h2 [innerText]="headline3.post_title"></h2>
+        <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div> Likes</div>
+      </button>
+        <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div> Comments</div>
+      </button>
+    </ion-item>
+
+
+    <ion-card *ngFor="let headline4 of headlinefour" (click)="openNavDetailsPage(headline4)">
+
+        <ion-card-content>
+            <p> {{headline4.post_title}}</p>
+        </ion-card-content>
+        <ion-item text-wrap>
+            <img class="image" [src]="headline4.post_image_content">
+        </ion-item>
+    </ion-card>
+
+
+    <ion-item text-wrap *ngFor="let headline5 of headlinefive" (click)="openNavDetailsPage(headline5)">
+        <ion-thumbnail item-left>
+            <img [src]="headline5.post_image_thumb">
+        </ion-thumbnail>
+        <h2 [innerText]="headline5.post_title"></h2>
+        <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div> Likes</div>
+      </button>
+        <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div> Comments</div>
+      </button>
+    </ion-item>
+
+    <ion-card *ngFor="let headline6 of headlinesix" (click)="openNavDetailsPage(headline6)">
+        <ion-card-content>
+            <p> {{headline6.post_title}}</p>
+        </ion-card-content>
+        <ion-item text-wrap>
+            <img class="image" [src]="headline6.post_image_content">
+        </ion-item>
+    </ion-card>
+
+    <ion-item text-wrap *ngFor="let headline7 of headlineseven" (click)="openNavDetailsPage(headline7)">
+        <ion-thumbnail item-left>
+            <img [src]="headline7.post_image_thumb">
+        </ion-thumbnail>
+        <h2 [innerText]="headline7.post_title"></h2>
+        <button ion-button icon-left clear small>
+    <ion-icon name="thumbs-up"></ion-icon>
+    <div> Likes</div>
+  </button>
+        <button ion-button icon-left clear small>
+    <ion-icon name="text"></ion-icon>
+    <div> Comments</div>
+  </button>
+    </ion-item>
+
+
+    <ion-card *ngFor="let headline8 of headlineeight" (click)="openNavDetailsPage(headline8)">
+        <ion-card-content>
+            <p> {{headline8.post_title}}</p>
+        </ion-card-content>
+        <ion-item text-wrap>
+            <img class="image" [src]="headline8.post_image_content">
+        </ion-item>
+    </ion-card>
+
+    <ion-item text-wrap *ngFor="let headline9 of headlinenine" (click)="openNavDetailsPage(headline9)">
+        <ion-thumbnail item-left>
+            <img [src]="headline9.post_image_thumb">
+        </ion-thumbnail>
+        <h2 [innerText]="headline9.post_title"></h2>
+        <button ion-button icon-left clear small>
+    <ion-icon name="thumbs-up"></ion-icon>
+    <div> Likes</div>
+  </button>
+        <button ion-button icon-left clear small>
+    <ion-icon name="text"></ion-icon>
+    <div> Comments</div>
+  </button>
+    </ion-item>
+
+
+    <ion-card *ngFor="let headline10 of headlineten" (click)="openNavDetailsPage(headline10)">
+
+        <ion-card-content>
+            <p> {{headline10.post_title}}</p>
+        </ion-card-content>
+        <ion-item text-wrap>
+            <img class="image" [src]="headline10.post_image_content">
+        </ion-item>
+    </ion-card>
+
+
+
+
+
+
+
+
 
 </ion-content>
